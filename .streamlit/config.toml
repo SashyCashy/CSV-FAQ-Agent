@@ -1,0 +1,6 @@
+[server]
+# Tells the server to automatically reload whenever a file change is saved
+runOnSave = true
+
+# Sets the background file watching system
+fileWatcherType = "auto"
