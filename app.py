@@ -96,9 +96,12 @@ if uploaded_file is not None:
                         prefix=SYSTEM_PROMPT,
                         verbose=True,
                         allow_dangerous_code=True,
-                        max_iterations=10,
-                        max_execution_time=60,
+                        agent_type="openai-tools",
+                        max_iterations=25,
+                        max_execution_time=120,
+                        early_stopping_method="generate",
                         handle_parsing_errors=True,
+                        number_of_head_rows=5,
                     )
                     agent_response = agent.invoke({ "input": user_query })
                     ai_answer = agent_response["output"]
